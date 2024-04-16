@@ -835,11 +835,11 @@ public class FlutterBluePlusPlugin implements
                     BluetoothGattCharacteristic characteristic = found.characteristic;
 
                     // check readable
-                    if ((characteristic.getProperties() & BluetoothGattCharacteristic.PROPERTY_READ) == 0) {
-                        result.error("readCharacteristic",
-                            "The READ property is not supported by this BLE characteristic", null);
-                        break;
-                    }
+                    // if ((characteristic.getProperties() & BluetoothGattCharacteristic.PROPERTY_READ) == 0) {
+                    //     result.error("readCharacteristic",
+                    //         "The READ property is not supported by this BLE characteristic", null);
+                    //     break;
+                    // }
 
                     // read
                     if(gatt.readCharacteristic(characteristic) == false) {
